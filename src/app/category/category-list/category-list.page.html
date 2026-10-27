@@ -1,21 +1,21 @@
 <div class="container">
     <h1>Listado de Categorías</h1>
 
-    <mat-table [dataSource]="dataSource"> //creamos la tabla
-        <ng-container matColumnDef="id"> // definiimos la columna1 id
+    <mat-table [dataSource]="dataSource"> <!-- creamos la tabla-->
+        <ng-container matColumnDef="id"> <!--  definiimos la columna1 id-->
             <mat-header-cell *matHeaderCellDef> Identificador </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="name"> // definimos la columna2 name
+        <ng-container matColumnDef="name"> <!-- definimos la columna2 categoria-->
             <mat-header-cell *matHeaderCellDef> Nombre categoría  </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="action"> // definimos la columna3 action
-            <mat-header-cell *matHeaderCellDef> (Acciones) </mat-header-cell>
-            <mat-cell *matCellDef="let element">
-                <button mat-icon-button style="color:rgb(10, 90, 155)"><mat-icon>edit</mat-icon></button>
+        <ng-container matColumnDef="action"> <!-- definimos la columna3 action-->
+            <mat-header-cell *matHeaderCellDef> <!--(Columna acciones sin nombre)--></mat-header-cell>
+            <mat-cell *matCellDef="let element"> <!--  se ponen en paralelo verticalmente-->
+                <button mat-icon-button style="color:rgb(10, 90, 155)" (click)="editCategory(element)"><mat-icon>edit</mat-icon></button>
                 <button mat-icon-button style="color:rgb(209, 28, 28)"><mat-icon>clear</mat-icon></button>
             </mat-cell>
         </ng-container>
@@ -25,6 +25,7 @@
     </mat-table>
 
     <div class="buttons">
-        <button mat-flat-button color="primary">Nueva categoría</button>
+        <!-- Conectamos el botón con la función createCategory -->
+        <button mat-flat-button color="primary" (click)="createCategory()">Nueva categoría</button>
     </div>   
 </div>
