@@ -43,7 +43,7 @@ export class CategoryEditComponent implements OnInit {
   onSave() {
     const id = this.id();
     const name = this.name();
-    if(!name) {
+    if(!name) { // Si el nombre es nulo, no hacer nada
       return;
     }
     // CREAR UN OBJETO DE CATEGORIA con los datos del formulario

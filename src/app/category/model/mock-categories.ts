@@ -1,5 +1,6 @@
 import { Category } from "./category";
 
+// Datos de ../model/Category
 export const CATEGORY_DATA: Category[] = [
     { id: 1, name: 'Dados' },
     { id: 2, name: 'Fichas' },

@@ -16,6 +16,7 @@ export class CategoryService {
 
     //EDITAR CATEGORIA
     saveCategory(category: Category): Observable<Category> {
+        // Aqui sería el "GUARDAR" botón
         return of(null);
     }
 
